@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="60dp"
+    android:layout_gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:src="@drawable/suhu"/>
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masukkan Data"
+            android:gravity="center_horizontal"
+            android:layout_alignStart="@+id/image"
+            android:textColor="@color/purple_500"
+            android:layout_below="@+id/image"
+            android:textStyle="bold|italic"
+            android:textSize="26sp"/>
+        <TextView
+            android:id="@+id/hari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masukkan Data"
+            android:gravity="center_horizontal"
+            android:layout_alignStart="@+id/judul"
+            android:textColor="@color/purple_500"
+            android:layout_below="@+id/judul" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/hari"
+            android:layout_below="@+id/hari"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@color/purple_200"
+            app:boxStrokeColor="@color/purple_200"
+            app:hintTextColor="@color/purple_200"
+            android:hint="Nis"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextNis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textBirthDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textName"
+            android:layout_below="@+id/textName"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@color/purple_200"
+            app:boxStrokeColor="@color/purple_200"
+            app:hintTextColor="@color/purple_200"
+            android:hint="Suhu"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextSuhu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_alignStart="@+id/textBirthDate"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp">
+            <Button
+                android:layout_weight="1"
+                android:text="Data"
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginEnd="10dp"
+                app:strokeColor="@color/purple_200"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon" />
+
+            <Button
+                android:layout_weight="5"
+                android:id="@+id/button1"
+                android:text="Save Data"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
